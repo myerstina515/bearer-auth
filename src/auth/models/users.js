@@ -3,6 +3,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+// const issuer = process.env.ISSUER;
 
 const users = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
@@ -16,7 +17,7 @@ users.virtual('token').get(function () {
   let tokenObject = {
     username: this.username,
   }
-  return jwt.sign(tokenObject, process.env.SECRET);
+  return jwt.sign(tokenObject, process.env.SECRET, {expiresIn: "15m", issuer: process.env.ISSUER.toString()});
 });
 
 users.pre('save', async function () {
