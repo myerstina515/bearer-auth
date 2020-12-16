@@ -6,31 +6,34 @@
 
 ### Links and Resources
 
-- [ci/cd](http://xyz.com) (GitHub Actions)
-- [back-end server url](http://xyz.com) (when applicable)
-- [front-end application](http://xyz.com) (when applicable)
+[HerokuDeployment](https://tinamyers-bearer-auth.herokuapp.com/)
+
+- Resources: Sara Strasner and Cait Rowland
+- [JWT](https://www.npmjs.com/package/jsonwebtoken)
 
 ### Setup
 
+- npm i @codefellows/supergoose base-64 bcrypt cors dotenv express jest jsonwebtoken mongoose morgan
+
 #### `.env` requirements (where applicable)
 
-i.e.
-
-- `PORT` - Port Number
+- `PORT` - 3000
 - `MONGODB_URI` - URL to the running mongo instance/db
+- `SECRET`
+- `ISSUER`
 
 #### How to initialize/run your application (where applicable)
 
-- e.g. `npm start`
+- `nodemon`
 
 #### How to use your library (where applicable)
 
 #### Tests
 
-- How do you run tests?
-- Any tests of note?
+- How do you run tests? run tests with command `npm test`
+- Any tests of note? all included tests to test all routes
 - Describe any tests that you did not complete, skipped, etc
 
 #### UML
 
-Link to an image of the UML for your application and response to events
+[UML](uml7.png)
